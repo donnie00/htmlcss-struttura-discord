@@ -4,18 +4,6 @@
     box-sizing: border-box;
 }
 
-.container {
-    width: 920px;
-    margin: auto;
-}
-
-.container-small {
-    width: 700px;
-    margin: auto;
-    background-color: fuchsia;
-    padding: 200px;
-}
-
 header {
     background-color: cyan;
     padding: 10px;
@@ -35,31 +23,6 @@ nav div {
     padding: 10px;
 }
 
-.link-container {
-    flex-grow: 1;
-}
-
-nav ul {
-    list-style: none;
-    display: flex;
-    justify-content: center;
-}
-
-nav ul li a {
-    text-decoration: none;
-    color: black;
-    padding: 0 10px;
-    height: 100%;
-
-    display: flex;
-    align-items: center;
-}
-
-.container .nav-side {
-    width: calc(920px / 4);
-    flex-shrink: 0;
-}
-
 header .container :last-child {
     text-align: right;
 }
@@ -72,38 +35,80 @@ section:first-of-type {
     background-color: blue;
 }
 
-main section:nth-child(2n+3) {
+section:nth-child(2n+3) {
     background-color: grey;
 }
 
-.row{
+footer {
+    background-color: black;
+}
+
+.nav-link-container {
+    flex-grow: 1;
+    height: 100%;
+    padding: 0;
+}
+
+.nav-link-container ul {
+    list-style: none;
     display: flex;
+    justify-content: center;
+
+    height: 100%;
 }
 
-.col-small {
-    background-color: blue;
-    flex-basis: 30%;
+.nav-link-container ul li a {
+    text-decoration: none;
+    color: black;
+    padding: 0 10px;
+    height: 100%;
+
+    display: flex;
+    align-items: center;
 }
 
-.col-big {
-    background-color: pink;
-    flex-basis: 70%;
+.nav-side {
+    width: calc(920px / 5);
 }
 
-.col-small,
-.col-big {
+[class^='container'] {
+    margin: auto;
+}
+
+.container {
+    width: 920px;
+}
+
+.container-small {
+    width: 700px;
+    background-color: fuchsia;
     padding: 200px;
 }
 
 .container-big {
-    margin: auto;
     width: 920px;
     padding: 400px;
     background-color: green;
 }
 
-footer {
-    background-color: black;
+.container .row{
+    display: flex;
+}
+
+.container .row .col-small {
+    background-color: blue;
+    flex-basis: 30%;
+}
+
+.container .row .col-big {
+    background-color: pink;
+    flex-basis: 70%;
+}
+
+/* Da rimuovere con contenuto */
+.col-small,
+.col-big {
+    padding: 200px;
 }
 
 .footer1 {
