@@ -9,6 +9,13 @@
     margin: auto;
 }
 
+.container-small {
+    width: 700px;
+    margin: auto;
+    background-color: fuchsia;
+    padding: 200px;
+}
+
 header {
     background-color: cyan;
     padding: 10px;
@@ -60,16 +67,39 @@ header .container :last-child {
 }
 
 section {
-    background-color: blue;
     padding: 40px;
 }
 
-section .container {
-    background-color: pink;
+section:first-of-type {
+    background-color: blue;
+}
 
+main section:nth-child(2n+3) {
+    background-color: grey;
+}
+
+.row{
+    display: flex;
+}
+
+.col-small {
+    background-color: blue;
+    flex-basis: 30%;
+}
+
+.col-big {
+    background-color: pink;
+    flex-basis: 70%;
+}
+
+.col-small,
+.col-big {
     padding: 200px;
 }
 
-main section div.container:first-of-type {
-    width: 750px;
+.container-big {
+    margin: auto;
+    width: 920px;
+    padding: 400px;
+    background-color: green;
 }
