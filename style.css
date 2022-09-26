@@ -32,8 +32,6 @@ nav {
 }
 
 nav div {
-    border: 1px dashed black;
-
     padding: 10px;
 }
 
@@ -102,4 +100,48 @@ main section:nth-child(2n+3) {
     width: 920px;
     padding: 400px;
     background-color: green;
+}
+
+footer {
+    background-color: black;
+}
+
+.footer1 {
+    display: flex;
+    padding: 5px 0 40px 0;
+    border-bottom: 2px solid blue;
+}
+
+.footer-menu {
+    border: 1px dashed black;
+    padding: 200px 50px;
+    background-color: tomato;
+    flex-basis: calc((920px / 6) * 2 );
+    flex-grow: 1;
+
+}
+
+.footer-links {
+    border: 1px dashed white;
+    background-color: aquamarine;
+    padding: 50px;
+    width: calc(920px / 6);
+}
+
+.footer2 {
+    margin-top: 40px;
+    padding: 1rem 0;
+    background-color: aqua;
+
+    color: white;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-logo,
+.footer-btn {
+    padding: 5px 10px;
+    background-color: lightpink;
 }
